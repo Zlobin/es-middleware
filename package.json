@@ -1,6 +1,6 @@
 {
   "name": "es-middleware",
-  "description": "Basic mplementation of the middleware pattern in JavaScript",
+  "description": "Basic implementation of the middleware pattern in JavaScript",
   "version": "1.0.0",
   "main": "src/index.js",
   "author": {
