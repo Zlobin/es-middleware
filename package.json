@@ -1,7 +1,7 @@
 {
   "name": "es-middleware",
   "description": "Basic implementation of the middleware pattern in JavaScript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "author": {
     "name": "Eugene Zlobin",
