@@ -5,6 +5,13 @@
 
 This library is an skeleton for creation of middlewares which perform some processing at the start and end of a "request". Middleware functions are functions that have access to the object itself.
 
+## Installation
+
+`npm i --save es-middleware`
+or
+`git clone https://github.com/Zlobin/es-middleware.git`
+`cd es-middleware && npm i && webpack`
+
 ## Examples
 
 ```js
