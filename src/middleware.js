@@ -5,11 +5,12 @@ export default class Middleware {
    *
    * @param {array|function} fn - function or array of functions.
    *
-   * @return true
+   * @return this
    */
   use(fn) {
     if (fn instanceof Array) {
-      return fn.forEach(func => this.use(func));
+      fn.forEach(func => this.use(func));
+      return this;
     }
 
     if (typeof fn !== 'function') {
@@ -20,11 +21,24 @@ export default class Middleware {
     this.run = (stack =>
       next =>
         stack(() =>
-          fn.call(this, next.bind(this))
+          fn.call(this.context || this, next.bind(this.context || this))
         )
     )(this.run);
 
-    return true;
+    return this;
+  }
+
+  /**
+   * Set context for MW's functions.
+   *
+   * @param {context} context.
+   *
+   * @return this.
+   */
+  setContext(context) {
+    this.context = context;
+
+    return this;
   }
 
   /**
