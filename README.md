@@ -34,7 +34,7 @@ var fn3 = function(next) {
 };
 var startTime;
 
-mw.use([fn1, fn2]))
+mw.use([fn1, fn2])
   .use(fn3);
 
 startTime = Date.now();
